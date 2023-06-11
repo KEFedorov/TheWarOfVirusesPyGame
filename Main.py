@@ -47,7 +47,7 @@ def main_window(screen, x, y):
 def draw_page_number(screen, number):
     text_color = COLOR_PINK
     message1 = 'Правила игры "Война вирусов"'
-    message2 = "Страница " + str(number) + " из 11"
+    message2 = "Страница " + str(number) + " из 10"
     message3 = 'Для переключения страницы используйте клавиши "влево" и "вправо"'
     font1 = pygame.font.Font(None, 50)
     font2 = pygame.font.Font(None, 40)
@@ -83,7 +83,7 @@ def rules(screen):
                         current_page -= 1
                         change = True
                 if event.key == pygame.K_RIGHT:
-                    if current_page < 11:
+                    if current_page < 10:
                         current_page += 1
                         change = True
             if change:
@@ -93,7 +93,7 @@ def rules(screen):
                 number = str(current_page // 10) + str(current_page % 10)
                 file_name = "rules\\rules" + number + ".jpg"
                 image = pygame.image.load(file_name)
-                if current_page in [5, 6, 11]:
+                if current_page in [5, 6, 10]:
                     screen.blit(image, (70, 120))
                 else:
                     screen.blit(image, (40, 120))
