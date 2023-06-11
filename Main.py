@@ -224,6 +224,8 @@ def game(screen, game_with_ai=False):
 if __name__ == '__main__':
     pygame.init()
     pygame.display.set_caption("Война вирусов")
+    icon = pygame.image.load("icon32.png")
+    pygame.display.set_icon(icon)
     size = screen_width, screen_height
     main_screen = pygame.display.set_mode(size)
     main_menu(main_screen)
