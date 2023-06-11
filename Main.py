@@ -1,10 +1,11 @@
+import sys
 import time
 from Game_Board import *
 
 
 def terminate():
     pygame.quit()
-    exit(0)
+    sys.exit(0)
 
 
 screen_width, screen_height = 850, 750
@@ -127,7 +128,7 @@ def main_menu(screen):
     screen.fill(COLOR_FIELD)
     user_choice = main_window(screen, 275, 50)
     if user_choice is None:
-        exit(0)
+        sys.exit(0)
     elif user_choice == 0:
         # game with friend
         game(screen)
